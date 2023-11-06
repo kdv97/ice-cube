@@ -8,3 +8,5 @@ This is a test to see if Ben used Git correctly.
 Can Ben merge a branch correctly?
 
 Yes, he can. 
+
+Can Katja merge?
