@@ -3,8 +3,4 @@
 
 This is a test to see if Chris used Git correctly.
 
-This is a test to see if Ben used Git correctly. 
-
-Can Ben merge a branch correctly?
-
-Yes, he can. 
+This is another test to see if Chris used Git correctly; this sentence should only appear in the chris-branch branch.
