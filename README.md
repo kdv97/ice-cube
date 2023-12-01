@@ -22,6 +22,7 @@ The data provided by Kaggle consisted of 660 parquet files, each consisting of a
   * ```[first/last]_pulse_index (int)```: index of the first/last row in the features dataframe belonging to this event.
   * ```[azimuth/zenith] (float32)```: the [azimuth/zenith] angle in radians of the neutrino. A value between 0 and 2*pi for the azimuth and 0 and pi for zenith. These are the target columns. The direction vector represented by zenith and azimuth points to where the neutrino came from.
 * **Sensor geometry:** A file containing x,y,z coordinates of all sensors.
+* **Data visualization:** In order to aid our understanding of the neutrino detection process and extract useful features for regression, we created a data visualization module in [event_plotting.ipynb](event_plotting.ipynb).
 
 ### Approaches
 
