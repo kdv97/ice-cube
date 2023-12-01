@@ -25,5 +25,9 @@ The data provided by Kaggle consisted of 660 parquet files, each consisting of a
 
 ### Approaches
 
-1. **Sensor-Based Linear Regression:** In [linear_regression_sensor_data.ipynb](linear_regression_sensor_data.ipynb), we perform several linear regressions which we call "sensor-based". This means that the features included make essential use of all 5,160 IceCube sensors. In essence, each data point in X_train fed into the LinearRegression object will be a 5160-tuple where the $i^{th}$ entry provides information about the (in)activation of the $i^{th}$ sensor for that event. This has complications detailed in the notebook, due to which existing packages could not be used directly.
-2. 
+1. **Best-Fit Line using PCA:** We used PCA to get the best fit line interpolating the active sensors as an initial estimate of the neutrino's direction.
+2. **Sensor-Based Linear Regression:** In [linear_regression_tensorflow.ipynb](linear_regression_tensorflow.ipynb), we make a custom loss funtion for tensor flow, then do a linear regression on our features for various optimizers (mostly Adam, after preliminary testing) in tensor flow models.
+3. **Linear Regression With Extracted Features:** We extracted various features from the raw event data. In [linear-regression-testing.ipynb](linear-regression-testing.ipynb), we investigate which of our extracted features may be useful in an attempt to find a model. Unfortunately, linear regression did not appear to help.
+4. **Physics-informed best-fit line:** In [Dataloader-TimeBestFit.ipynb](Dataloader-TimeBestFit.ipynb), we use a formula found in a physics paper to compute the best fit line of the points, taking into account time. The source is 'Direction Reconstruction of IceCube Neutrino Events using Millipede" by Alexander Wallace.
+5. **Fully connected neural network:**
+6. **Convolutional neural network:**
